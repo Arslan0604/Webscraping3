@@ -185,9 +185,9 @@ class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
         random_browser_header = self._get_random_browser_header()
 
         request.headers['accept-language'] = random_browser_header['accept-language']
-        
-        
-        
+        request.headers['sec-fetch-user'] = random_browser_header['sec-fetch-user']
+        request.headers['sec-fetch-mod'] = random_browser_header['sec-fetch-mod']
+        request.headers['sec-fetch-site'] = random_browser_header['sec-fetch-site']
         request.headers['sec-ch-ua-platform'] = random_browser_header['sec-ch-ua-platform']
         request.headers['sec-ch-ua-mobile'] = random_browser_header['sec-ch-ua-mobile']
         request.headers['sec-ch-ua'] = random_browser_header['sec-ch-ua']
