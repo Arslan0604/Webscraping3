@@ -19,7 +19,7 @@ FEEDS = {
 SCRAPEOPS_API_KEY = '6cab1526-7898-4397-9aca-6b28d4af0a1b'
 SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT = 'https://headers.scrapeops.io/v1/user-agents'
 SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
-SCRAPEOPS_NUM_RESULTS = 5
+SCRAPEOPS_NUM_RESULTS = 50
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "bookscraper8 (+http://www.yourdomain.com)"
