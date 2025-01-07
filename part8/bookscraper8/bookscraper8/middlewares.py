@@ -148,5 +148,4 @@ class ScrapeOpsFakeUserAgentMiddleware:
         print(request.headers['User-Agent'])
 
 
-        print("********* NEW HEADER ATTACHED **********")
-        print(request.headers['User-Agent'])
+        
