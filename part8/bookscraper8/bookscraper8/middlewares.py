@@ -157,7 +157,7 @@ class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
     def __init__(self, settings):
         self.scrapeops_api_key = settings.get('SCRAPEOPS_API_KEY')
         self.scrapeops_endpoint = settings.get('SCRAPEOPS_FAKE_BROWSER_HEADER_ENDPOINT', 'http://headers.scrapeops.io/v1/browser-headers?') 
-        self.scrapeops_fake_browser_headers_active = settings.get('SCRAPEOPS_FAKE_BROWSER_HEADER_ENABLED', False)
+        self.scrapeops_fake_browser_headers_active = settings.get('SCRAPEOPS_FAKE_BROWSER_HEADER_ENABLED', True)
         self.scrapeops_num_results = settings.get('SCRAPEOPS_NUM_RESULTS')
         self.headers_list = []
         self._get_headers_list()
@@ -183,5 +183,15 @@ class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
     
     def process_request(self, request, spider):        
         random_browser_header = self._get_random_browser_header()
-        request.headers = random_browser_header
+        
+        request.headers['accept-language'] = random_browser_header['accept-language']
+        request.headers['sec-fetch-user'] = random_browser_header['sec-fetch-user']
+        request.headers['sec-fetch-mod'] = random_browser_header['sec-fetch-mod']
+        request.headers['sec-fetch-site'] = random_browser_header['sec-fetch-site']
+        request.headers['sec-ch-ua-platform'] = random_browser_header['sec-ch-ua-platform']
+        request.headers['sec-ch-ua-mobile'] = random_browser_header['sec-ch-ua-mobile']
+        request.headers['sec-ch-ua'] = random_browser_header['sec-ch-ua']
+        request.headers['accept'] = random_browser_header['accept']
+        request.headers['user-agent'] = random_browser_header['user-agent']
+        request.headers['upgrade-insecure-requests'] = random_browser_header['upgrade-insecure-requests']
         

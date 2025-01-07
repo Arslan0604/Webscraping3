@@ -19,7 +19,7 @@ FEEDS = {
 SCRAPEOPS_API_KEY = '6cab1526-7898-4397-9aca-6b28d4af0a1b'
 SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT = 'https://headers.scrapeops.io/v1/user-agents'
 SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
-SCRAPEOPS_NUM_RESULTS = 50
+SCRAPEOPS_NUM_RESULTS = 5
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "bookscraper8 (+http://www.yourdomain.com)"
@@ -60,7 +60,7 @@ ROBOTSTXT_OBEY = False
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
 #    "bookscraper8.middlewares.Bookscraper8DownloaderMiddleware": 543,
-    "bookscraper8.middlewares.ScrapeOpsFakeUserAgentMiddleware": 400,
+    "bookscraper8.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
 }
 
 # Enable or disable extensions
