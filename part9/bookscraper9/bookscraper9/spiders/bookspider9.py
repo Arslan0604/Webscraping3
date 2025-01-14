@@ -53,3 +53,5 @@ class Bookspider9Spider(scrapy.Spider):
         book_item['price'] = response.css('p.price_color::text').get(),
         
         yield book_item
+
+        
