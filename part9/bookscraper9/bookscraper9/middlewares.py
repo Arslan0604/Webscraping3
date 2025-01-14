@@ -198,3 +198,17 @@ class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
 
         print("********* NEW HEADER ATTACHED **********")
         print(request.headers)
+
+
+class MyProxyMiddleware(object):
+
+    @classmethod
+    def __init__(cls, crawler):
+        return cls(crawler, settings)
+    
+    def __init__(self, settings):
+        self.user = settings.get('PROXY_USER')
+        self.password = settings.get('PROXY_PASSWORD')
+        self.endpoint = settings.get('PROXY_ENDPOINT')
+        self.port = settings.get('PROXY_PORT')
+        
