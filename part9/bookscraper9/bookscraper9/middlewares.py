@@ -206,7 +206,7 @@ class MyProxyMiddleware(object):
 
     @classmethod
     def __init__(cls, crawler):
-        return cls(crawler, settings)
+        return cls(crawler, settings) # I need to check this (settings)
     
     def __init__(self, settings):
         self.user = settings.get('PROXY_USER')
