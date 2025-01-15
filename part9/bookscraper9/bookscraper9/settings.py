@@ -27,8 +27,8 @@ ROTATING_PROXY_LIST = [
     '103.66.233.173:4145',
 ]
 
-PROXY_USER = 'username'
-PROXY_PASSWORD = 'password'
+PROXY_USER = 'spjcjcikc3'
+PROXY_PASSWORD = 'dloQqv0+B73dLr7czT'
 PROXY_ENDPOINT = 'gate.smartproxy.com'
 PROXY_PORT = '7000'
 
