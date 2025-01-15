@@ -8,7 +8,7 @@ from scrapy import signals
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
 
-from part2.bookscraper.bookscraper import settings
+
 
 
 class Bookscraper9SpiderMiddleware:
@@ -204,11 +204,12 @@ class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
 
 import base64
 
+
 class MyProxyMiddleware(object):
 
     @classmethod
     def __init__(cls, crawler):
-        return cls(crawler,settings) # I need to check this (settings)
+        return cls(crawler.settings) 
     
     def __init__(self, settings):
         self.user = settings.get('PROXY_USER')

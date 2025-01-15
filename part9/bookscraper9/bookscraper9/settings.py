@@ -74,6 +74,7 @@ ROBOTSTXT_OBEY = True
 DOWNLOADER_MIDDLEWARES = {
     "bookscraper9.middlewares.Bookscraper9DownloaderMiddleware": 543,
     "bookscraper9.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
+    'bookscraper9.middlewares.MyProxyMiddleware': 350,
 #   "rotating_proxies.middlewares.RotatingProxyMiddleware" : 610,
 #   "rotating_proxies.middlewares.BanDetectionMiddleware" : 620,
 }
