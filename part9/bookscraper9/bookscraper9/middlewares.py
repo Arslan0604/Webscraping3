@@ -202,15 +202,21 @@ class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
         print(request.headers)
 
 
+import base64
+
 class MyProxyMiddleware(object):
 
     @classmethod
     def __init__(cls, crawler):
-        return cls(crawler, settings) # I need to check this (settings)
+        return cls(crawler,settings) # I need to check this (settings)
     
     def __init__(self, settings):
         self.user = settings.get('PROXY_USER')
         self.password = settings.get('PROXY_PASSWORD')
         self.endpoint = settings.get('PROXY_ENDPOINT')
         self.port = settings.get('PROXY_PORT')
+
+    def process_request(self, request, spider):
+        user_credentials = '{user}:{passw}'.format(user=self.user, passw=self.password)
+
         
