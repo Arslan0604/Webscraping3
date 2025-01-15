@@ -27,6 +27,11 @@ ROTATING_PROXY_LIST = [
     '103.66.233.173:4145',
 ]
 
+PROXY_USER = 'username'
+PROXY_PASSWORD = 'password'
+PROXY_ENDPOINT = 'gate.smartproxy.com'
+PROXY_PORT = '7000'
+
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
