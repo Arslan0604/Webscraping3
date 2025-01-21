@@ -74,9 +74,9 @@ ROBOTSTXT_OBEY = True
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-   "bookscraper9.middlewares.Bookscraper9DownloaderMiddleware": 543,
-   "bookscraper9.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
-   'bookscraper9.middlewares.MyProxyMiddleware': 350,
+#   "bookscraper9.middlewares.Bookscraper9DownloaderMiddleware": 543,
+#   "bookscraper9.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
+#   'bookscraper9.middlewares.MyProxyMiddleware': 350,
 #   "rotating_proxies.middlewares.RotatingProxyMiddleware" : 610,
 #   "rotating_proxies.middlewares.BanDetectionMiddleware" : 620,
     'scrapeops_scrapy_proxy_sdk.scrapeops_scrapy_proxy_sdk.ScrapeOpsScrapyProxySdk': 725,
